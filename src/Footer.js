@@ -4,6 +4,7 @@ class Footer extends Component {
    return (
      <div class="footer">
        <div class="links">
+
          <div>
            Toutes les marques apparaissant sur highTech.com sont la propriété
            de leurs propriétaires respectifs .
@@ -13,6 +14,10 @@ class Footer extends Component {
          </div>
        </div>
      </div>
+
+    
+  
+
    );
  }
 }
