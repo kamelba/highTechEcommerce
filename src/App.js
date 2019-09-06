@@ -49,6 +49,7 @@ class App extends Component {
 
                <Route path="/register" component={Register}/>
           <Route path="/Annonce" exact strict component={Announce} />
+
         </Router>
         <Footer/>
       </div>

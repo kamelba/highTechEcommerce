@@ -19,7 +19,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
             Rester connecté sur cet appareil
           </Label>
         </FormGroup>
-        <Button>Valider</Button>
+        <Button >Valider</Button>
         <FormGroup>
           <Label for="text">Vous avez oublié votre mot de passe ? </Label>
           <a href='#'>Cliquez ici</a>

@@ -22,7 +22,8 @@ class MonCompte extends Component {
   render() {
     return (
       <div>
-        <Button color="info" onClick={this.toggle} >Mon compte</Button>
+        
+        <Button  color="info" onClick={this.toggle} >Mon compte</Button>
         
         <Modal style={{minWidth:'800px'}} isOpen={this.state.modal} toggle={this.toggle}    >
           <ModalHeader toggle={this.toggle}>Mon compte</ModalHeader>
@@ -31,8 +32,8 @@ class MonCompte extends Component {
                 <Login  />
                 <div className="ligne_verticale" />
                 {/* <SignUp /> */}
-                <Link to="/register"><button onClick={this.toggle}>Inscrivez vous</button></Link>
-
+                <Link to="/register"><button className="btnSearch" onClick={this.toggle}>Inscrivez vous</button></Link>
+ 
              </div>
           </ModalBody>
           <ModalFooter>

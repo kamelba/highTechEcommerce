@@ -35,7 +35,7 @@ class Searchbar extends Component {
         />
         <button
           onClick={() => {this.props.filterChange(this.state.filterName)  }}
-          className="btnSearch"
+          className="btnSearchFilter"
         >
           Rechercher
         </button>

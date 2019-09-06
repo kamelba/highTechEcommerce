@@ -30,14 +30,14 @@ class CardModel extends Component {
   render() {
     return (
       <div>
-        <figure class="snip1396 green">
+        <figure className="snip1396 green">
           <img src={this.props.imga} />
-          <div class="image">
+          <div className="image">
             <img src={this.props.imga} />
           </div>
           <figcaption>
             <h3>{this.props.title}</h3>
-            <p>{this.props.description}</p>
+            <p className='descrip'>{this.props.description}</p>
           </figcaption>
           <div class="price">
             <p>{this.props.price} DT</p>

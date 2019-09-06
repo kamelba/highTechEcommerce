@@ -8,7 +8,6 @@
   z-index: 1;
 }
 
-
 .navBar {
   display: flex;
   flex-direction: row;
@@ -34,6 +33,7 @@ li a {
 
 .body {
   background-color: #e0d9d7;
+  min-height: 600px;
 }
 button {
   width: 150px;
@@ -171,7 +171,10 @@ button {
   letter-spacing: 1px;
 }
 .snip1396 .price {
-  left: 0;
+  left: -15px;
+  top: -11px;
+  font-size: 1.5em;
+  color: orange;
 }
 .snip1396 .price s {
   margin-right: 5px;
@@ -205,7 +208,6 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   height: 100%;
- 
 }
 .btnSearch {
   border-radius: 5px;
@@ -215,8 +217,61 @@ button {
   width: 150px;
   height: 38px;
 }
-              
+.btnSearch:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 0px 5px 40px -10px rgba(163, 201, 223, 0.842);
+  transition: all 0.4s ease 0s;
+  /* -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57); */
+}
 
+/* button recherche */
+.btnSearchFilter {
+  display: inline-block;
+  text-align: center;
+  background: #17a2b8;
+  border-radius: 5px;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  outline: none !important;
+  color: white;
+  width: 150px;
+  height: 38px;
+}
+
+.btnSearchFilter:before,
+.btnSearchFilter:after {
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: #17a2b8;
+  border-radius: 50%;
+  transition: transform .4s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.btnSearchFilter:before {
+  top: 15%;
+  left: 36%;
+}
+
+.btnSearchFilter:after {
+  bottom: 13%;
+  right: 34%;
+}
+
+.btnSearchFilter:hover:before,
+.btnSearchFilter:hover:after {
+  transform: none;
+}
+.btnSearchFilter:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  transition: all 0.4s ease 0s;
+}
 
 .inputBox {
   width: 500px;
@@ -242,10 +297,9 @@ button {
   flex-direction: column;
 }
 
-
 /* annonce */
 
-.model-annonce{
+.model-annonce {
   width: 50%;
   display: flex;
   justify-content: center;
@@ -253,21 +307,19 @@ button {
   left: 25%;
   position: absolute;
   padding: 50px;
-
 }
 
-
-  /* register annnonce form */
-  .h1Annonce{
-    display: flex;
-  }
+/* register annnonce form */
+.h1Annonce {
+  display: flex;
+}
 .stylingForm .container {
   width: 60%;
   margin: 50px auto;
   box-shadow: 1px 1px 20px #ececec;
   border-radius: 5px;
   background: white;
-  padding: 30px
+  padding: 30px;
 }
 
 .stylingForm .container .leftSide > img {
@@ -277,7 +329,7 @@ button {
 }
 
 .stylingForm .container .rightSide > h1 {
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .stylingForm .container .rightSide > form .form-group input {
@@ -291,13 +343,13 @@ button {
   width: 100%;
   margin: 25px 0;
   background: #00bcd4;
-  border-color: #00bcd4
+  border-color: #00bcd4;
 }
 
 .stylingForm .container .rightSide > form > button > span {
-  margin: 0 4px
+  margin: 0 4px;
 }
-      /* footer */
+/* footer */
 .footer {
   background-image: url(./image/footer.jpg);
   height: 90px;
@@ -306,19 +358,80 @@ button {
   justify-content: center;
   border-top: 1px solid #cedce5;
   background-size: 121%;
-  background-position-x: 76%; 
+  background-position-x: 76%;
+  position: relative;
 }
 
-
-
- .links {
+.links {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
   color: #1b1b1b;
 }
 
+/* button contact */
+.btnContactPosition {
+  position: absolute;
+  right: 0;
+}
+.btnContact {
+  position: relative;
+  padding: 0.5em 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin: 1em 0.8em;
+  color: #1b1b1b;
+  font-family: Georgia, serif;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: normal;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
+}
+.btnContact::after,
+.btnContact::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+.btnContact::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #e4e4e4;
+  border-right-color: #e4e4e4;
+}
+.btnContact::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #e4e4e4;
+  border-left-color: #e4e4e4;
+}
+.btnContact:hover:after,
+.btnContact:hover:before {
+  width: 100%;
+  height: 100%;
+}
 
- 
-
-
+.modal-content {
+  background-image: url(./image/Wave2.png);
+  box-shadow: 1px 0px 19px 2px rgb(199, 195, 195);
+  background-repeat: no-repeat;
+  background-position-x: -343%;
+}
+.descrip {
+  width: 200px;
+}
